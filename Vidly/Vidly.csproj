@@ -227,6 +227,14 @@
     <Compile Include="Migrations\201910020821245_AllowNullOnDateTimeCustomers.Designer.cs">
       <DependentUpon>201910020821245_AllowNullOnDateTimeCustomers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910020907512_AddBithdateToCustomer.cs" />
+    <Compile Include="Migrations\201910020907512_AddBithdateToCustomer.Designer.cs">
+      <DependentUpon>201910020907512_AddBithdateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910020913054_MakingDateTimeNullableInCustomerModel.cs" />
+    <Compile Include="Migrations\201910020913054_MakingDateTimeNullableInCustomerModel.Designer.cs">
+      <DependentUpon>201910020913054_MakingDateTimeNullableInCustomerModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -356,6 +364,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910020821245_AllowNullOnDateTimeCustomers.resx">
       <DependentUpon>201910020821245_AllowNullOnDateTimeCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910020907512_AddBithdateToCustomer.resx">
+      <DependentUpon>201910020907512_AddBithdateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910020913054_MakingDateTimeNullableInCustomerModel.resx">
+      <DependentUpon>201910020913054_MakingDateTimeNullableInCustomerModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
