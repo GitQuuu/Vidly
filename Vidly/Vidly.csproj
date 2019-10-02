@@ -215,6 +215,18 @@
     <Compile Include="Migrations\201910020722349_AddSubscrintionNameToMembershipTypes.Designer.cs">
       <DependentUpon>201910020722349_AddSubscrintionNameToMembershipTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910020749081_AddBirthdayToCustomerTable.cs" />
+    <Compile Include="Migrations\201910020749081_AddBirthdayToCustomerTable.Designer.cs">
+      <DependentUpon>201910020749081_AddBirthdayToCustomerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910020802067_ChangeBirthdayColummInCustomers.cs" />
+    <Compile Include="Migrations\201910020802067_ChangeBirthdayColummInCustomers.Designer.cs">
+      <DependentUpon>201910020802067_ChangeBirthdayColummInCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910020821245_AllowNullOnDateTimeCustomers.cs" />
+    <Compile Include="Migrations\201910020821245_AllowNullOnDateTimeCustomers.Designer.cs">
+      <DependentUpon>201910020821245_AllowNullOnDateTimeCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -335,6 +347,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910020722349_AddSubscrintionNameToMembershipTypes.resx">
       <DependentUpon>201910020722349_AddSubscrintionNameToMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910020749081_AddBirthdayToCustomerTable.resx">
+      <DependentUpon>201910020749081_AddBirthdayToCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910020802067_ChangeBirthdayColummInCustomers.resx">
+      <DependentUpon>201910020802067_ChangeBirthdayColummInCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910020821245_AllowNullOnDateTimeCustomers.resx">
+      <DependentUpon>201910020821245_AllowNullOnDateTimeCustomers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

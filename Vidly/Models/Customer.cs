@@ -16,5 +16,6 @@ namespace Vidly.Models
         //MembershipType is called navigation property
         public MembershipType MembershipType { get; set; }
         public byte MemberShipTypeId { get; set; }
+        public DateTime Birthday { get; set; }
     }
 }
