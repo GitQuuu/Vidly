@@ -195,6 +195,26 @@
     <Compile Include="Migrations\201910011209485_ApplyAnnotationToCustomerName.Designer.cs">
       <DependentUpon>201910011209485_ApplyAnnotationToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910020655420_AddNameToMembershipTypeWithDataAnnotation.cs" />
+    <Compile Include="Migrations\201910020655420_AddNameToMembershipTypeWithDataAnnotation.Designer.cs">
+      <DependentUpon>201910020655420_AddNameToMembershipTypeWithDataAnnotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910020705451_ReorderNameColumnInMembershipTypesTable.cs" />
+    <Compile Include="Migrations\201910020705451_ReorderNameColumnInMembershipTypesTable.Designer.cs">
+      <DependentUpon>201910020705451_ReorderNameColumnInMembershipTypesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910020708108_ReorderNameColumnInMembershipTypesTable1.cs" />
+    <Compile Include="Migrations\201910020708108_ReorderNameColumnInMembershipTypesTable1.Designer.cs">
+      <DependentUpon>201910020708108_ReorderNameColumnInMembershipTypesTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910020711016_UsingDataAnnotationsSchemaToOrderColumns.cs" />
+    <Compile Include="Migrations\201910020711016_UsingDataAnnotationsSchemaToOrderColumns.Designer.cs">
+      <DependentUpon>201910020711016_UsingDataAnnotationsSchemaToOrderColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910020722349_AddSubscrintionNameToMembershipTypes.cs" />
+    <Compile Include="Migrations\201910020722349_AddSubscrintionNameToMembershipTypes.Designer.cs">
+      <DependentUpon>201910020722349_AddSubscrintionNameToMembershipTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -300,6 +320,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910011209485_ApplyAnnotationToCustomerName.resx">
       <DependentUpon>201910011209485_ApplyAnnotationToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910020655420_AddNameToMembershipTypeWithDataAnnotation.resx">
+      <DependentUpon>201910020655420_AddNameToMembershipTypeWithDataAnnotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910020705451_ReorderNameColumnInMembershipTypesTable.resx">
+      <DependentUpon>201910020705451_ReorderNameColumnInMembershipTypesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910020708108_ReorderNameColumnInMembershipTypesTable1.resx">
+      <DependentUpon>201910020708108_ReorderNameColumnInMembershipTypesTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910020711016_UsingDataAnnotationsSchemaToOrderColumns.resx">
+      <DependentUpon>201910020711016_UsingDataAnnotationsSchemaToOrderColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910020722349_AddSubscrintionNameToMembershipTypes.resx">
+      <DependentUpon>201910020722349_AddSubscrintionNameToMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
