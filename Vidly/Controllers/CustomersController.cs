@@ -19,13 +19,14 @@ namespace Vidly.Controllers
             _context = new ApplicationDbContext();
         }
 
-        //protected override void Dispose(bool disposing)
-        //{
-        //    _context.Dispose();
-        //}
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
         // GET: Customers
         public ViewResult Index()
         {
+            // include is for eager loading, so we can tie others classes together for our views
             var customers = _context.Customers.Include(c => c.MembershipType).ToList();
 
             return View(customers);
@@ -33,6 +34,7 @@ namespace Vidly.Controllers
 
         public ActionResult Details(int id)
         {
+            // include is for eager loading, so we can tie others classes together our views
             Customer customer = _context.Customers.Include( c => c.MembershipType).SingleOrDefault(c => c.Id == id);
             if (customer == null)
                 return HttpNotFound();
