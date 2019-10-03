@@ -10,17 +10,19 @@ namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
+        // we need a DB context to access our database
         private ApplicationDbContext _context;
 
+        // and we need to initialize it as our class constructor
         public CustomersController()
         {
             _context = new ApplicationDbContext();
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            _context.Dispose();
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    _context.Dispose();
+        //}
         // GET: Customers
         public ViewResult Index()
         {
