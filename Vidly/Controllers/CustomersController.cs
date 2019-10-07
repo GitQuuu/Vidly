@@ -33,7 +33,14 @@ namespace Vidly.Controllers
                 MembershipTypes = membershiptypes
             };
             return View(viewModel);
-        }  
+        }
+
+        // Aplly this dataAnnotion/attribute to this action to make sure it only can be called with HttpPost and not HttpGet
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            return View();
+        }
 
         // GET: Customers
         public ViewResult Index()
