@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace Vidly.Models
 {
@@ -16,6 +17,7 @@ namespace Vidly.Models
         //MembershipType is called navigation property
         public MembershipType MembershipType { get; set; }
         public byte MemberShipTypeId { get; set; }
+        [Display(Name = "Date of birth")]
         public DateTime? Birthdate { get; set; }
     }
 }
