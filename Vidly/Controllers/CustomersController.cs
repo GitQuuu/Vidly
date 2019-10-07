@@ -32,7 +32,7 @@ namespace Vidly.Controllers
             {
                 MembershipTypes = membershiptypes
             };
-            return View(viewModel);
+            return View("CustomerForm",viewModel);
         }
 
         // Apply this dataAnnotation/attribute to this action to make sure it only can be called with HttpPost and not HttpGet, as a best practice if your action is modifying data make sure it can only be called by post and not by get
