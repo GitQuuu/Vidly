@@ -40,7 +40,12 @@ namespace Vidly.Controllers
 
             return View(movies);
         }
-   
+
+        public ActionResult New(Movie movie)
+        {
+          
+            return View();
+        }
 
     }
 }
