@@ -17,6 +17,7 @@ namespace Vidly.Models
 
 
         [ForeignKey("Genre")]
+        [Display(Name = "Genre")]
         public int GenreId { get; set; }
 
         public virtual Genre Genre { get; set; }
