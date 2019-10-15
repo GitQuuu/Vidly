@@ -95,5 +95,6 @@ namespace Vidly.Controllers
                 return View("CustomerForm",viewModel);
             }
         }
+
     }
 }
