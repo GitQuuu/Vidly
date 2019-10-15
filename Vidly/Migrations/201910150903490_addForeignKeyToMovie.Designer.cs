@@ -7,13 +7,13 @@ namespace Vidly.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class StartingFromScratchOnMovie : IMigrationMetadata
+    public sealed partial class addForeignKeyToMovie : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(StartingFromScratchOnMovie));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addForeignKeyToMovie));
         
         string IMigrationMetadata.Id
         {
-            get { return "201910141305493_StartingFromScratchOnMovie"; }
+            get { return "201910150903490_addForeignKeyToMovie"; }
         }
         
         string IMigrationMetadata.Source

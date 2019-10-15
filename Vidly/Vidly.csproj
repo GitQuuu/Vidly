@@ -227,10 +227,6 @@
     <Compile Include="Migrations\201910020821245_AllowNullOnDateTimeCustomers.Designer.cs">
       <DependentUpon>201910020821245_AllowNullOnDateTimeCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910020907512_AddBithdateToCustomer.cs" />
-    <Compile Include="Migrations\201910020907512_AddBithdateToCustomer.Designer.cs">
-      <DependentUpon>201910020907512_AddBithdateToCustomer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201910020913054_MakingDateTimeNullableInCustomerModel.cs" />
     <Compile Include="Migrations\201910020913054_MakingDateTimeNullableInCustomerModel.Designer.cs">
       <DependentUpon>201910020913054_MakingDateTimeNullableInCustomerModel.cs</DependentUpon>
@@ -239,21 +235,21 @@
     <Compile Include="Migrations\201910030642406_InitMoviesTables.Designer.cs">
       <DependentUpon>201910030642406_InitMoviesTables.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910030741343_PopulateMoviesTable.cs" />
-    <Compile Include="Migrations\201910030741343_PopulateMoviesTable.Designer.cs">
-      <DependentUpon>201910030741343_PopulateMoviesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910141305493_StartingFromScratchOnMovie.cs" />
-    <Compile Include="Migrations\201910141305493_StartingFromScratchOnMovie.Designer.cs">
-      <DependentUpon>201910141305493_StartingFromScratchOnMovie.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910141307133_RemovingGenreFromMovie.cs" />
-    <Compile Include="Migrations\201910141307133_RemovingGenreFromMovie.Designer.cs">
-      <DependentUpon>201910141307133_RemovingGenreFromMovie.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201910150613557_InitGenreTableAndRemovingRequiredFromMovieId.cs" />
     <Compile Include="Migrations\201910150613557_InitGenreTableAndRemovingRequiredFromMovieId.Designer.cs">
       <DependentUpon>201910150613557_InitGenreTableAndRemovingRequiredFromMovieId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910150847361_addGenreIdToMovie.cs" />
+    <Compile Include="Migrations\201910150847361_addGenreIdToMovie.Designer.cs">
+      <DependentUpon>201910150847361_addGenreIdToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910150903490_addForeignKeyToMovie.cs" />
+    <Compile Include="Migrations\201910150903490_addForeignKeyToMovie.Designer.cs">
+      <DependentUpon>201910150903490_addForeignKeyToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910151014573_RelationBetweenMovieAndGenre.cs" />
+    <Compile Include="Migrations\201910151014573_RelationBetweenMovieAndGenre.Designer.cs">
+      <DependentUpon>201910151014573_RelationBetweenMovieAndGenre.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -388,26 +384,23 @@
     <EmbeddedResource Include="Migrations\201910020821245_AllowNullOnDateTimeCustomers.resx">
       <DependentUpon>201910020821245_AllowNullOnDateTimeCustomers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910020907512_AddBithdateToCustomer.resx">
-      <DependentUpon>201910020907512_AddBithdateToCustomer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910020913054_MakingDateTimeNullableInCustomerModel.resx">
       <DependentUpon>201910020913054_MakingDateTimeNullableInCustomerModel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910030642406_InitMoviesTables.resx">
       <DependentUpon>201910030642406_InitMoviesTables.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910030741343_PopulateMoviesTable.resx">
-      <DependentUpon>201910030741343_PopulateMoviesTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910141305493_StartingFromScratchOnMovie.resx">
-      <DependentUpon>201910141305493_StartingFromScratchOnMovie.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910141307133_RemovingGenreFromMovie.resx">
-      <DependentUpon>201910141307133_RemovingGenreFromMovie.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910150613557_InitGenreTableAndRemovingRequiredFromMovieId.resx">
       <DependentUpon>201910150613557_InitGenreTableAndRemovingRequiredFromMovieId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910150847361_addGenreIdToMovie.resx">
+      <DependentUpon>201910150847361_addGenreIdToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910150903490_addForeignKeyToMovie.resx">
+      <DependentUpon>201910150903490_addForeignKeyToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910151014573_RelationBetweenMovieAndGenre.resx">
+      <DependentUpon>201910151014573_RelationBetweenMovieAndGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
