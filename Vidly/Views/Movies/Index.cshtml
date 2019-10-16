@@ -6,31 +6,28 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>Movies</h2>
-@if (!Model.Any())
-{
-    <text>No Movie in database yet</text>
-}
-else
-{
-    
-    <table id="movies" class="table table-bordered table-hover">
-        <thead>
-        <tr>
-            <th>Movie</th>
-            <th>Genre</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var movie in Model)
-        {
+    @if (!Model.Any())
+    {
+    <p>No movies in database yet</p>
+    }
+    else
+    {
+        <table id="movies" class="table table-bordered table-hover">
+            <thead>
             <tr>
-                <td>@Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
-                <td>@movie.Genre.Name</td>
+                <th>Movie</th>
+                <th>Genre</th>
             </tr>
-        }
-        </tbody>
-    </table>
-}
+            </thead>
+            <tbody>
+            @foreach (var movie in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
+                    <td>@movie.Genre.Name</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
 
-    
-}
