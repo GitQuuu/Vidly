@@ -1,11 +1,12 @@
-﻿@model IEnumerable<Vidly.Models.Customer>
+﻿@using Vidly.Models
+@model IEnumerable<Vidly.Models.Customer>
 @{
     ViewBag.Title = "Customers";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Customers</h2>
-
+@Html.ActionLink("New customer","New","Customers",null, new{@class = "btn btn-primary"})
 @if (!Model.Any())
 {
     <p>We don't have any customers yet.</p>
@@ -16,6 +17,7 @@ else
         <thead>
         <tr>
             <th>Customer</th>
+            <th>Discount Rate</th>
         </tr>
         </thead>
 
@@ -23,7 +25,9 @@ else
         @foreach (var customer in Model)
         {
             <tr>
-                <td>@Html.ActionLink(customer.Name, "Details", "Customers", new {id = customer.Id}, null)</td>
+                <td>@Html.ActionLink(customer.Name, "Edit", "Customers", new { id = customer.Id }, null) <input type="hidden" name="hiddenH2" id="H2" value="Edit Customer"> </td>
+                
+                <td>@customer.MembershipType.Name</td>
             </tr>
         }
         </tbody>
