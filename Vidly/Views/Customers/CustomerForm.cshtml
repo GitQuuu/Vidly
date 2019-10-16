@@ -1,10 +1,11 @@
-﻿@model Vidly.ViewModels.CustomerFormViewModel
+﻿@using Vidly.ViewModels
+@model Vidly.ViewModels.CustomerFormViewModel
 @{
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Customer</h2>
+<h2>@Model.H2Tag</h2>
 
 @*If we do not wrap line 9 into a using the form will not close <form> by using using it will use dispose which contains </form> *@
 @using (Html.BeginForm("Save", "Customers"))

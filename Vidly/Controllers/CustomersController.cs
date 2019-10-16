@@ -33,7 +33,33 @@ namespace Vidly.Controllers
                 Customer = new Customer(),
                 MembershipTypes = membershiptypes
             };
+            viewModel.H2Tag = "New Customer";
+           
             return View("CustomerForm",viewModel);
+        }
+        public ActionResult Edit(int id)
+        {
+            //We need to get the customer with the this id from the db
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            // if the givin customer excist in the db it will return if not we want to check for that
+            if (customer == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                // otherwise use this customer and render its form, the model behind the action "new" model is CustomerFormViewModel 
+                var viewModel = new CustomerFormViewModel
+                {
+                    //set customer to this object
+                    Customer = customer,
+                    //initialize membershiptype
+                    MembershipTypes = _context.MembershipType.ToList()
+                };
+                viewModel.H2Tag = "Edit Customer";
+                // rename "new" to customerForm pass it to our viewModel
+                return View("CustomerForm", viewModel);
+            }
         }
 
         // Apply this dataAnnotation/attribute to this action to make sure it only can be called with HttpPost and not HttpGet, as a best practice if your action is modifying data make sure it can only be called by post and not by get
@@ -78,29 +104,7 @@ namespace Vidly.Controllers
             return View(customer);
         }
 
-        public ActionResult Edit(int id)
-        {
-            //We need to get the customer with the this id from the db
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
-            // if the givin customer excist in the db it will return if not we want to check for that
-            if (customer == null)
-            {
-                return HttpNotFound();
-            }
-            else
-            {
-                // otherwise use this customer and render its form, the model behind the action "new" model is CustomerFormViewModel 
-                var viewModel = new CustomerFormViewModel
-                {
-                    //set customer to this object
-                    Customer = customer,
-                    //initialize membershiptype
-                    MembershipTypes = _context.MembershipType.ToList()
-                };
-                // rename "new" to customerForm pass it to our viewModel
-                return View("CustomerForm",viewModel);
-            }
-        }
+      
 
     }
 }
