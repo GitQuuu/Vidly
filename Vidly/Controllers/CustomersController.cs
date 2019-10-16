@@ -39,6 +39,7 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save(Customer customer)
         {
+            // if customer. Id is == 0 we have a new customer and thats because our customer db starts from 1 which means if its zero it does not excist
             if (customer.Id == 0)
             {
                 _context.Customers.Add(customer);
