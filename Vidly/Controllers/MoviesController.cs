@@ -49,8 +49,8 @@ namespace Vidly.Controllers
             {
                 Genres = genres
             };
-          
-            return View("New",viewModel);
+            viewModel.H2Tag = "New movie";
+            return View("MovieForm",viewModel);
         }
 
         [HttpPost]
@@ -74,6 +74,26 @@ namespace Vidly.Controllers
             
             _context.SaveChanges();
             return RedirectToAction("Index", "Movies");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            Movie movie = _context.Movies.SingleOrDefault(m => m.Id == id);
+
+            if (movie == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                MovieFormViewModel viewModel = new MovieFormViewModel
+                {
+                    Movie = movie,
+                    Genres = _context.Genres.ToList()
+                };
+                viewModel.H2Tag = "Edit movie";
+                return View("MovieForm", viewModel);
+            }
         }
     }
 }

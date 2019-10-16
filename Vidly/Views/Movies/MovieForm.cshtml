@@ -6,7 +6,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Movie</h2>
+<h2>@Model.H2Tag</h2>
 
 @using (Html.BeginForm("Save", "Movies"))
 {
