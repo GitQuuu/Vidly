@@ -18,6 +18,7 @@ else
         <tr>
             <th>Customer</th>
             <th>Discount Rate</th>
+            <th style = "text-align:center">Delete</th>
         </tr>
         </thead>
 
@@ -28,6 +29,7 @@ else
                 <td>@Html.ActionLink(customer.Name, "Edit", "Customers", new { id = customer.Id }, null) <input type="hidden" name="hiddenH2" id="H2" value="Edit Customer"> </td>
                 
                 <td>@customer.MembershipType.Name</td>
+                <td align ="center">@Html.ActionLink("Delete","Delete","Customers",new{@class ="btn btn-danger", })</td>
             </tr>
         }
         </tbody>
