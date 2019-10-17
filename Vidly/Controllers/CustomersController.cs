@@ -66,9 +66,21 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save(Customer customer)
         {
+            // If modelstate is not true, we will return the user back to the CustomerForm
+            if (!ModelState.IsValid)
+            {
+                CustomerFormViewModel viewmodel = new CustomerFormViewModel
+                {
+                    Customer = customer,
+                    MembershipTypes = _context.MembershipType.ToList()
+                };
+
+                return View("CustomerForm", viewmodel);
+            }
             // if customer. Id is == 0 we have a new customer and thats because our customer db starts from 1 which means if its zero it does not excist
             if (customer.Id == 0)
             {
+                
                 _context.Customers.Add(customer);
             }
             else
