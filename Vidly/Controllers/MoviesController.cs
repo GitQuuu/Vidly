@@ -65,7 +65,7 @@ namespace Vidly.Controllers
                 Movie movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
 
                 movieInDb.Name = movie.Name;
-                movieInDb.Genre = movie.Genre;
+                movieInDb.GenreId = movie.GenreId;
                 movieInDb.DateAdded = movie.DateAdded;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
                 movieInDb.NumberInStock = movie.NumberInStock;
