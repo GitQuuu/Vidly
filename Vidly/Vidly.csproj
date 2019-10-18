@@ -255,6 +255,10 @@
     <Compile Include="Migrations\201910170636356_addDataAnnotationToMovieModel.Designer.cs">
       <DependentUpon>201910170636356_addDataAnnotationToMovieModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910180942021_TryingToAddDateOnly.cs" />
+    <Compile Include="Migrations\201910180942021_TryingToAddDateOnly.Designer.cs">
+      <DependentUpon>201910180942021_TryingToAddDateOnly.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -411,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910170636356_addDataAnnotationToMovieModel.resx">
       <DependentUpon>201910170636356_addDataAnnotationToMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910180942021_TryingToAddDateOnly.resx">
+      <DependentUpon>201910180942021_TryingToAddDateOnly.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
