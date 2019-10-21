@@ -12,7 +12,7 @@ namespace Vidly.Models
         {
             Customer customer = (Customer) validationContext.ObjectInstance;
 
-            if (customer.MemberShipTypeId == 0 || customer.MemberShipTypeId == 1)
+            if (customer.MemberShipTypeId == MembershipType.Unknown || customer.MemberShipTypeId == MembershipType.PasAsYouGo)
             {
                 return ValidationResult.Success;
             }

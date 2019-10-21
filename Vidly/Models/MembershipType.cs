@@ -25,5 +25,8 @@ namespace Vidly.Models
         [Column(Order = 4)]
         public byte DiscountRate { get; set; }
 
+        public static readonly int Unknown = 0;
+
+        public static readonly int PasAsYouGo = 1;
     }
 }
