@@ -17,7 +17,7 @@ namespace Vidly.Models
                 return ValidationResult.Success;
             }
 
-            if (customer.MemberShipTypeId == 0 || customer.Birthdate == null)
+            if ( customer.Birthdate == null)
             {
                 return new ValidationResult("Birthdate is required");
             }
