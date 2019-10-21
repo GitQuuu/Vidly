@@ -6,13 +6,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>Movies</h2>
+@Html.ActionLink("Add new movie","New","Movies",new{@class = "btn btn-primary"})
     @if (!Model.Any())
     {
     <p>No movies in database yet</p>
     }
     else
     {
-        @Html.ActionLink("Add new movie","New","Movies",new{@class = "btn btn-primary"})
         <table id="movies" class="table table-bordered table-hover">
             <thead>
             <tr>
