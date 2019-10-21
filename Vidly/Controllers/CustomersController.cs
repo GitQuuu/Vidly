@@ -30,6 +30,7 @@ namespace Vidly.Controllers
             List<MembershipType> membershiptypes = _context.MembershipType.ToList();
             var viewModel = new CustomerFormViewModel
             {
+                // by creating this new customer its default value will be initialize to 0, and when the hidden field in Customerform is rendered it will have the value 0 instad of null
                 Customer = new Customer(),
                 MembershipTypes = membershiptypes
             };
