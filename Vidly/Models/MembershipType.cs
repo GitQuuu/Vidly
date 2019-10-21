@@ -28,5 +28,12 @@ namespace Vidly.Models
         public static readonly int Unknown = 0;
 
         public static readonly int PasAsYouGo = 1;
+
+        public static readonly int Monthly = 2;
+
+        public static readonly int Quarterly = 3;
+
+        public static readonly int Annually = 4;
+
     }
 }
