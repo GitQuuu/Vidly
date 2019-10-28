@@ -47,11 +47,11 @@ namespace Vidly.Controllers
 
             var viewModel = new MovieFormViewModel
             {
-                Movie = new Movie(),
+               
                 Genres = genres
                 
             };
-            viewModel.H2Tag = "New movie";
+            
             return View("MovieForm",viewModel);
         }
 
@@ -60,9 +60,9 @@ namespace Vidly.Controllers
         {
             if (!ModelState.IsValid)
             {
-                MovieFormViewModel viewModel = new MovieFormViewModel
+                MovieFormViewModel viewModel = new MovieFormViewModel(movie)
                 {
-                    Movie = movie,
+                    
                     Genres = _context.Genres.ToList()
                 };
 
@@ -99,12 +99,12 @@ namespace Vidly.Controllers
             }
             else
             {
-                MovieFormViewModel viewModel = new MovieFormViewModel
+                MovieFormViewModel viewModel = new MovieFormViewModel(movie)
                 {
-                    Movie = movie,
-                    Genres = _context.Genres.ToList()
+                   
+                   Genres = _context.Genres.ToList()
                 };
-                viewModel.H2Tag = "Edit movie";
+               
                 return View("MovieForm", viewModel);
             }
         }
