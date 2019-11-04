@@ -4,6 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using AutoMapper;
+using Vidly.Dtos;
 using Vidly.Models;
 
 namespace Vidly.Controllers.Api
@@ -17,12 +19,12 @@ namespace Vidly.Controllers.Api
             _context = new ApplicationDbContext();
         }
         //Get customer
-        public IEnumerable<Customer> GetCustomers()
+        public IEnumerable<CustomerDto> GetCustomers()
         {
-            return _context.Customers.ToList();
+            return _context.Customers.ToList().Select(Mapper.Map<Customer,CustomerDto>);
         }
         // Get specific customer
-        public Customer GetCustomer(int id)
+        public CustomerDto GetCustomer(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
 
@@ -32,12 +34,12 @@ namespace Vidly.Controllers.Api
             }
             else
             {
-              return customer;
+              return Mapper.Map<Customer,CustomerDto>(customer) ;
             }
         }
 
         [HttpPost]
-        public Customer CreateCustomer(Customer customer)
+        public CustomerDto CreateCustomer(CustomerDto customerDto)
         {
             if (!ModelState.IsValid)
             {
@@ -45,15 +47,18 @@ namespace Vidly.Controllers.Api
             }
             else
             {
+                var customer = Mapper.Map<CustomerDto, Customer>(customerDto);
                 _context.Customers.Add(customer);
                 _context.SaveChanges();
 
-                return customer;
+                customerDto.Id = customer.Id;
+
+                return customerDto;
             }
         }
 
         [HttpPut]
-        public void UpdateCustomer(int id, Customer customer)
+        public void UpdateCustomer(int id, CustomerDto customerDto)
         {
             if (!ModelState.IsValid)
             {
@@ -68,11 +73,7 @@ namespace Vidly.Controllers.Api
             }
             else
             {
-                customerInDb.Name = customer.Name;
-                customerInDb.Id = customer.Id;
-                customerInDb.Birthdate = customer.Birthdate;
-                customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
-                customerInDb.MemberShipTypeId = customer.MemberShipTypeId;
+                Mapper.Map(customerDto, customerInDb);
 
                 _context.SaveChanges();
             }
