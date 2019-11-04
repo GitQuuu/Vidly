@@ -68,11 +68,11 @@ namespace Vidly.Controllers.Api
             }
             else
             {
-                customerInDb.Name = customerInDb.Name;
-                customerInDb.Id = customerInDb.Id;
-                customerInDb.Birthdate = customerInDb.Birthdate;
-                customerInDb.IsSubscribedToNewsletter = customerInDb.IsSubscribedToNewsletter;
-                customerInDb.MemberShipTypeId = customerInDb.MembershipType;
+                customerInDb.Name = customer.Name;
+                customerInDb.Id = customer.Id;
+                customerInDb.Birthdate = customer.Birthdate;
+                customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+                customerInDb.MemberShipTypeId = customer.MemberShipTypeId;
 
                 _context.SaveChanges();
             }
