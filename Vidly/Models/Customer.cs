@@ -18,7 +18,7 @@ namespace Vidly.Models
         public bool IsSubscribedToNewsletter { get; set; }
 
         //MembershipType is called navigation property
-        public MembershipType MembershipType { get; set; }
+        public byte MembershipType { get; set; }
 
         [Display(Name = "Membership type")]
         public byte MemberShipTypeId { get; set; }
