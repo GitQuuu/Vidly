@@ -15,6 +15,8 @@ namespace Vidly.Controllers
             Movie movie = new Movie() {Name = "Shrek!"};
 
             return View(movie);
+            // Anomynous objects can be considered as temporarily objects we use inline
+            //return RedirectToAction("Index", "Home", new {page = "1", sortBy = "Name"});
         }
     }
 }
