@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -14,13 +15,23 @@ namespace Vidly.Controllers
         {
             Movie movie = new Movie() {Name = "Shrek!"};
 
-            return View(movie);
+            var customers = new List<Customer>
+            {
+                new Customer {Name = "Customer 1"},
+                new Customer {Name = "Customer 2"},
+            };
 
-            // Anomynous objects can be considered as temporarily objects we use inline
-            //return RedirectToAction("Index", "Home", new {page = "1", sortBy = "Name"});
+            var ViewModel = new RandomMovieViewModel
+            {
+                Movie = movie,
+                Customers = customers
+            };
 
-            //return HttpNotFound();
+            return View(ViewModel);
+
+          
         }
+
         [Route("movies7released/{year}/{month:regex(\\d{2}:range(1,12)}")]
         public ActionResult ByReleaseDate(int year, int month)
         {
