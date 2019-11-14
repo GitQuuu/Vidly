@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
+using static System.Text.RegularExpressions.Regex;
 
 namespace Vidly.Controllers
 {
@@ -21,19 +22,19 @@ namespace Vidly.Controllers
                 new Customer {Name = "Customer 2"},
             };
 
-            var ViewModel = new RandomMovieViewModel
+            var viewModel = new RandomMovieViewModel
             {
                 Movie = movie,
                 Customers = customers
             };
 
-            return View(ViewModel);
+            return View(viewModel);
 
           
         }
 
-        [Route("movies7released/{year}/{month:regex(\\d{2}:range(1,12)}")]
-        public ActionResult ByReleaseDate(int year, int month)
+        [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]
+        public ActionResult ByReleaseYear(int year, int month)
         {
             return Content(year + "/" + month);
         }
