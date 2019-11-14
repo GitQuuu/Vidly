@@ -21,7 +21,11 @@ namespace Vidly.Controllers
 
             //return HttpNotFound();
         }
-
+        public ActionResult ByReleaseDate(int year, int month)
+        {
+            return Content(year + "/" + month);
+        }
+        
 
         public ActionResult Edit(int id)
         {
