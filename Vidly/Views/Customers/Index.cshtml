@@ -6,19 +6,22 @@
 
 <h2>Customers</h2>
 
-<table class="table table-bordered table-hover">
+@Html.ActionLink("Create","Create","Customers", new {@class ="btn btn-primary"} )
+
+<table class="table table-bordered table-hover", style="margin-top: 1%"> 
     <thead>
-    <tr>
-        <th>Name</th>
-    </tr>
+        <tr>
+            <th>Name</th>
+            <th style="text-align: center">Options</th>
+        </tr>
     </thead>
     <tbody>
-    @foreach (var customer in Model)
-    {
-        <tr>
-            <td>@customer.firstName  @customer.lastName</td>
-
-        </tr>
-    }
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(customer.firstName +" "+ customer.lastName,"Edit","Customers")</td>
+                <td>@Html.ActionLink("Delete","Delete","Customers",new {@class="btn btn-primary btn-danger center-block"})</td>
+            </tr>
+        }
     </tbody>
 </table>
