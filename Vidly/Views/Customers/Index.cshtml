@@ -20,7 +20,7 @@
         {
             <tr>
                 <td>@Html.ActionLink(customer.firstName +" "+ customer.lastName,"Edit","Customers")</td>
-                <td>@Html.ActionLink("Delete","Delete","Customers",new {@class="btn btn-primary btn-danger center-block"})</td>
+                <td>@Html.ActionLink("Delete","Delete","Customers", new {id = customer.Id} ,new {@class="btn btn-primary btn-danger center-block"})</td>
             </tr>
         }
     </tbody>
