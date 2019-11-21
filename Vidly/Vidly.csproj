@@ -179,11 +179,16 @@
     <Compile Include="Migrations\201911181029507_InitCustomerToDB.Designer.cs">
       <DependentUpon>201911181029507_InitCustomerToDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911211110505_InitMembershipTypesTable.cs" />
+    <Compile Include="Migrations\201911211110505_InitMembershipTypesTable.Designer.cs">
+      <DependentUpon>201911211110505_InitMembershipTypesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -269,6 +274,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201911181029507_InitCustomerToDB.resx">
       <DependentUpon>201911181029507_InitCustomerToDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911211110505_InitMembershipTypesTable.resx">
+      <DependentUpon>201911211110505_InitMembershipTypesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
