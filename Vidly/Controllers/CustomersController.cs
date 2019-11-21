@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -50,9 +52,17 @@ namespace Vidly.Controllers
             return RedirectToAction("Index", "Customers");
         }
 
-        public ActionResult Edit()
+        public ActionResult Create(int id)
         {
-            return View();
+            List<MembershipType> membershipTypes = _context.MembershipTypes.ToList();
+
+            var viewModel = new CustomerForm
+            {
+                Customer = new Customer(),
+                MembershipTypes = membershipTypes
+            };
+
+            return View("CustomerForm",viewModel);
         }
     }
 }
